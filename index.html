@@ -461,14 +461,15 @@
 
         // Initialize
         function initDashboard() {
-            // Use v4 to clear old cache with add/delete buttons
-            const saved = localStorage.getItem('hipporizz_schedule_v4');
+            // Use v5 to clear old cache and sync with full_schedule.md
+            const saved = localStorage.getItem('hipporizz_schedule_v5');
             if (saved) {
                 document.getElementById('scheduleContent').innerHTML = saved;
                 reattachListeners();
             } else {
-                // Clear old v3 data
+                // Clear old cache data
                 localStorage.removeItem('hipporizz_schedule_v3');
+                localStorage.removeItem('hipporizz_schedule_v4');
                 loadSchedule();
             }
             calculateDaysLeft();
@@ -814,7 +815,7 @@
         // Save & Load
         function saveData() {
             const html = document.getElementById('scheduleContent').innerHTML;
-            localStorage.setItem('hipporizz_schedule_v4', html);
+            localStorage.setItem('hipporizz_schedule_v5', html);
         }
 
         // Export to Markdown
