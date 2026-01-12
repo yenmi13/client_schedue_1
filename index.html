@@ -128,6 +128,18 @@
             margin-top: 1rem;
         }
 
+        .end-date {
+            display: inline-block;
+            background: var(--ink);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            margin-left: 0.5rem;
+        }
+
         /* Stats */
         .stats {
             display: flex;
@@ -165,7 +177,7 @@
 
         .phase-item {
             flex: 1;
-            min-width: 120px;
+            min-width: 100px;
             padding: 1rem;
             background: var(--gray-light);
             text-align: center;
@@ -330,6 +342,39 @@
             margin-bottom: 0.3rem;
         }
 
+        /* Milestone */
+        .milestone-box {
+            background: var(--accent-light);
+            border: 1px solid var(--accent);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 4px;
+        }
+
+        .milestone-box h3 {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .milestone-table {
+            width: 100%;
+            font-size: 0.85rem;
+        }
+
+        .milestone-table td {
+            padding: 0.3rem 0;
+        }
+
+        .milestone-table td:first-child {
+            font-weight: 600;
+        }
+
+        .milestone-table td:last-child {
+            text-align: right;
+            color: var(--gray-dark);
+        }
+
         /* Footer */
         .footer {
             text-align: center;
@@ -350,7 +395,7 @@
             }
 
             .phase-item {
-                min-width: 100px;
+                min-width: 90px;
                 padding: 0.8rem;
             }
         }
@@ -373,9 +418,40 @@
     <div id="mainContent" class="container" style="display: none;">
         <header class="header">
             <h1>Hipporizz 調色盤微光風扇</h1>
-
-            <div class="target-date">目標上線：2026/03/03 (二)</div>
+            <div class="target-date">目標上線：2026/03/10 (二)</div>
+            <div class="end-date">募資結束：2026/04/07 (二)</div>
         </header>
+
+        <!-- Milestone Box -->
+        <div class="milestone-box">
+            <h3>🎯 關鍵里程碑</h3>
+            <table class="milestone-table">
+                <tr>
+                    <td>📦 樣品到貨</td>
+                    <td>01/23 (四)</td>
+                </tr>
+                <tr>
+                    <td>📸 拍攝週</td>
+                    <td>01/26 - 01/30</td>
+                </tr>
+                <tr>
+                    <td>📢 問卷投廣</td>
+                    <td>02/01 起</td>
+                </tr>
+                <tr>
+                    <td>🧧 春節休假</td>
+                    <td>02/13 - 02/23</td>
+                </tr>
+                <tr>
+                    <td>🚀 募資上線</td>
+                    <td>03/10 (二)</td>
+                </tr>
+                <tr>
+                    <td>🏁 募資結束</td>
+                    <td>04/07 (二)</td>
+                </tr>
+            </table>
+        </div>
 
         <!-- Stats Bar -->
         <div class="stats">
@@ -392,7 +468,7 @@
                 <div class="stat-label">完成率</div>
             </div>
             <div class="stat-item">
-                <div class="stat-value" id="daysLeft">59</div>
+                <div class="stat-value" id="daysLeft">57</div>
                 <div class="stat-label">剩餘天數</div>
             </div>
         </div>
@@ -402,17 +478,17 @@
             <a class="phase-item active" onclick="scrollToSection('phase1')">
                 <div class="phase-num">PHASE 1</div>
                 <div class="phase-name">籌備期</div>
-                <div class="phase-date">12/30 - 1/12</div>
+                <div class="phase-date">1/06 - 1/22</div>
             </a>
             <a class="phase-item" onclick="scrollToSection('phase2')">
                 <div class="phase-num">PHASE 2</div>
-                <div class="phase-name">預熱期</div>
-                <div class="phase-date">1/13 - 2/02</div>
+                <div class="phase-name">拍攝週</div>
+                <div class="phase-date">1/23 - 1/31</div>
             </a>
             <a class="phase-item" onclick="scrollToSection('phase3')">
                 <div class="phase-num">PHASE 3</div>
-                <div class="phase-name">衝刺期 I</div>
-                <div class="phase-date">2/03 - 2/12</div>
+                <div class="phase-name">預熱期</div>
+                <div class="phase-date">2/01 - 2/12</div>
             </a>
             <a class="phase-item" onclick="scrollToSection('cny')">
                 <div class="phase-num">🧧</div>
@@ -421,13 +497,18 @@
             </a>
             <a class="phase-item" onclick="scrollToSection('phase4')">
                 <div class="phase-num">PHASE 4</div>
-                <div class="phase-name">衝刺期 II</div>
-                <div class="phase-date">2/24 - 3/02</div>
+                <div class="phase-name">衝刺期</div>
+                <div class="phase-date">2/24 - 3/09</div>
             </a>
             <a class="phase-item" onclick="scrollToSection('phase5')">
                 <div class="phase-num">PHASE 5</div>
                 <div class="phase-name">上線日</div>
-                <div class="phase-date">3/03</div>
+                <div class="phase-date">3/10</div>
+            </a>
+            <a class="phase-item" onclick="scrollToSection('phase6')">
+                <div class="phase-num">PHASE 6</div>
+                <div class="phase-name">募資期</div>
+                <div class="phase-date">3/10 - 4/07</div>
             </a>
         </div>
 
@@ -435,6 +516,7 @@
         <div style="text-align: center; margin-bottom: 1.5rem;">
             <input type="file" id="mdFileInput" accept=".md" style="display: none;" onchange="importMDFile(this)">
             <label for="mdFileInput" class="btn" style="cursor: pointer;">📁 匯入 .md 檔案</label>
+            <button class="btn" onclick="resetSchedule()">🔄 重置時程</button>
         </div>
         <!-- Schedule Content -->
         <div id="scheduleContent">
@@ -442,7 +524,7 @@
         </div>
 
         <footer class="footer">
-            <p>Powered by YMS | 目標上線日：2026/03/03</p>
+            <p>Powered by YMS | 目標上線日：2026/03/10 | 募資結束：2026/04/07</p>
         </footer>
     </div>
 
@@ -466,8 +548,8 @@
 
         // Initialize
         function initDashboard() {
-            // Use v5 to clear old cache and sync with full_schedule.md
-            const saved = localStorage.getItem('hipporizz_schedule_v5');
+            // Use v6 for new schedule (3/10 launch)
+            const saved = localStorage.getItem('hipporizz_schedule_v6');
             if (saved) {
                 document.getElementById('scheduleContent').innerHTML = saved;
                 reattachListeners();
@@ -475,9 +557,18 @@
                 // Clear old cache data
                 localStorage.removeItem('hipporizz_schedule_v3');
                 localStorage.removeItem('hipporizz_schedule_v4');
+                localStorage.removeItem('hipporizz_schedule_v5');
                 loadSchedule();
             }
             calculateDaysLeft();
+            updateStats();
+        }
+
+        // Reset schedule
+        function resetSchedule() {
+            if (!confirm('確定要重置所有時程嗎？這會清除所有勾選狀態和備註。')) return;
+            localStorage.removeItem('hipporizz_schedule_v6');
+            loadSchedule();
             updateStats();
         }
 
@@ -498,15 +589,14 @@
                         const titleEl = block.querySelector('.week-title');
                         if (titleEl && titleEl.textContent.trim() === weekName) {
                             const taskList = block.querySelector('.task-list');
-                            const addBtn = taskList.querySelector('.add-task-btn');
 
-                            // Remove existing tasks (keep add button)
+                            // Remove existing tasks
                             taskList.querySelectorAll('.task-item').forEach(t => t.remove());
 
                             // Add imported tasks
                             weekTasks[weekName].forEach(task => {
                                 const li = createTaskItem(task.text, task.checked);
-                                taskList.insertBefore(li, addBtn);
+                                taskList.appendChild(li);
                             });
                         }
                     });
@@ -556,100 +646,101 @@
             return weekTasks;
         }
 
-        // Load schedule from markdown file
+        // Load schedule - Updated for 3/10 launch
         function loadSchedule() {
-            // Parse the schedule data directly (embedded for reliability)
             const scheduleData = [
                 {
                     id: 'phase1',
-                    title: 'Phase 1: 籌備期 (12/30 - 01/12)',
+                    title: 'Phase 1: 籌備期 (01/06 - 01/22)',
                     weeks: [
-                        {
-                            name: 'W0',
-                            date: '12/30 - 01/05',
-                            tasks: [
-                                '排程表確認',
-                                '問卷設計 (SurveyCake)',
-                                '產品素材拍攝風格確認',
-                                '攝影師檔期確認（1月中前必須拍完）',
-                                '拍攝樣品狀態確認（+需發送3-5份給社群合作）'
-                            ]
-                        },
                         {
                             name: 'W1',
                             date: '01/06 - 01/12',
                             tasks: [
-                                '問卷放上 SurveyCake',
+                                'Hipporizz 合作合約簽署',
+                                'KOL 名單初選（10 位 1-5萬人 follower）',
+                                '問卷設計 (SurveyCake)',
                                 '問卷素材製作',
-                                'Hipporizz 合作合約',
-                                '影片&平面攝影師檔期確認',
-                                'KOL 名單初選（10 位 1-5萬人follower）',
                                 '回饋方案設計',
                                 '產品策略簡報'
+                            ]
+                        },
+                        {
+                            name: 'W2',
+                            date: '01/13 - 01/19',
+                            tasks: [
+                                'KOL 聯繫 & Brief 發送',
+                                '拍攝風格確認 & 腳本定案',
+                                '攝影師檔期確認（1/26-1/30）',
+                                '問卷廣告素材準備'
+                            ]
+                        },
+                        {
+                            name: 'W3',
+                            date: '01/20 - 01/22',
+                            tasks: [
+                                '等待樣品到貨（01/23）',
+                                '拍攝場地最終確認',
+                                '募資頁面文案初稿'
                             ]
                         }
                     ]
                 },
                 {
                     id: 'phase2',
-                    title: 'Phase 2: 預熱期 (01/13 - 02/02)',
+                    title: 'Phase 2: 拍攝週 (01/23 - 01/31)',
                     weeks: [
                         {
-                            name: 'W2',
-                            date: '01/13 - 01/19',
+                            name: '📦',
+                            date: '01/23 (四) 樣品到貨',
                             tasks: [
-                                'KOL 聯繫 & Brief 發送',
-                                '社群內容規劃',
-                                '拍攝素材&影片腳本定案',
-                                '問卷廣告確認'
-                            ]
-                        },
-                        {
-                            name: 'W3',
-                            date: '01/20 - 01/26',
-                            tasks: [
-                                '攝影師拍攝平面',
-                                '攝影師影片',
-                                '問卷頁面上線 + 廣告投放開始',
-                                'KOL 試用產品寄送',
-                                '募資頁面文案初稿完成'
+                                '樣品驗收（大風扇 logo、燈光調暗、小的顏色）',
+                                '確認拍攝用樣品狀態'
                             ]
                         },
                         {
                             name: 'W4',
-                            date: '01/27 - 02/02',
+                            date: '01/26 - 01/30',
                             tasks: [
-                                '問卷廣告持續投放（低成本期）',
-                                'KOL 第一批寄送',
-                                '募資頁面素材＋內容',
-                                '廣告素材初段準備'
+                                '平面拍攝',
+                                '影片拍攝',
+                                '情境照拍攝',
+                                'KOL 試用產品準備'
+                            ]
+                        },
+                        {
+                            name: '📸',
+                            date: '01/31 (五)',
+                            tasks: [
+                                '拍攝素材整理 & 初剪',
+                                '確認素材可用於廣告'
                             ]
                         }
                     ]
                 },
                 {
                     id: 'phase3',
-                    title: 'Phase 3: 衝刺期 I (02/03 - 02/12)',
+                    title: 'Phase 3: 預熱期 (02/01 - 02/12)',
                     weeks: [
                         {
                             name: 'W5',
-                            date: '02/03 - 02/09',
+                            date: '02/01 - 02/09',
                             tasks: [
-                                '募資頁面最終確認',
-                                'KOL 第二批寄送',
-                                'KOL 第一批內容審核',
-                                '第一波問卷整理',
-                                '走期廣告素材定案-6組'
+                                '問卷頁面上線',
+                                '問卷廣告投放開始',
+                                'KOL 第一批產品寄送',
+                                '募資頁面素材製作',
+                                '募資頁面文案定稿'
                             ]
                         },
                         {
                             name: 'W6',
                             date: '02/10 - 02/12',
                             tasks: [
-                                '嘖嘖頁面上刊（預留修改時間）',
-                                '社群內容規劃',
-                                '問卷EDM / 簡訊名單整理',
-                                'KOL 第二批內容審核'
+                                '問卷廣告持續投放',
+                                'KOL 內容審核（第一批）',
+                                '募資頁面初版完成',
+                                '春節前最後確認'
                             ]
                         }
                     ]
@@ -662,7 +753,7 @@
                             name: '🧧',
                             date: '02/13 - 02/23',
                             tasks: [
-                                'KOL第二批製作頁面素材',
+                                '廣告少量自動投放',
                                 '僅監控數據，不做主動操作',
                                 '2/24 收假後立即進入最終衝刺'
                             ]
@@ -671,30 +762,40 @@
                 },
                 {
                     id: 'phase4',
-                    title: 'Phase 4: 衝刺期 II (02/24 - 03/02)',
+                    title: 'Phase 4: 衝刺期 (02/24 - 03/09)',
                     weeks: [
                         {
                             name: 'W7',
                             date: '02/24 - 03/02',
                             tasks: [
-                                'KOL第二批製作頁面素材',
-                                '上線名單確認',
-                                '最終廣告素材確認',
-                                'meta預告發布＋倒數計時',
-                                '募資頁面最終確認',
+                                '收假後名單整理',
+                                '嘖嘖頁面送審（預留修改時間）',
+                                'KOL 第二批內容審核',
+                                '走期廣告素材定案（6組）',
+                                '社群內容規劃'
+                            ]
+                        },
+                        {
+                            name: 'W8',
+                            date: '03/03 - 03/09',
+                            tasks: [
+                                '嘖嘖頁面最終確認',
+                                '問卷 EDM / 簡訊名單整理',
+                                'KOL 發布時間確認',
+                                'Meta 預告發布 + 倒數計時',
                                 '最後問卷名單清洗 & 分眾',
-                                'KOL 發佈時間確認'
+                                '上線當天流程確認'
                             ]
                         }
                     ]
                 },
                 {
                     id: 'phase5',
-                    title: 'Phase 5: Launch Day (03/03)',
+                    title: 'Phase 5: Launch Day (03/10)',
                     weeks: [
                         {
-                            name: 'W8',
-                            date: '03/03 (二)',
+                            name: '🚀',
+                            date: '03/10 (二)',
                             tasks: [
                                 '11:00 - EDM 發送',
                                 '11:00 - 頁面開放',
@@ -703,6 +804,32 @@
                                 '12:00 - 簡訊推播',
                                 '12:00 - 廣告全面開啟',
                                 '19:00 - 檢視首日數據，調整廣告策略'
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: 'phase6',
+                    title: 'Phase 6: 募資期 (03/10 - 04/07)',
+                    weeks: [
+                        {
+                            name: 'W9',
+                            date: '03/10 - 04/07',
+                            tasks: [
+                                '每日數據監控',
+                                '廣告優化調整',
+                                'KOL 後續波段發布',
+                                '社群持續經營',
+                                '贊助者問題回覆'
+                            ]
+                        },
+                        {
+                            name: '🏁',
+                            date: '04/01 - 04/07 最後衝刺',
+                            tasks: [
+                                '結束倒數提醒',
+                                '最後加碼活動（若需要）',
+                                '感謝贊助者訊息'
                             ]
                         }
                     ]
@@ -820,54 +947,7 @@
         // Save & Load
         function saveData() {
             const html = document.getElementById('scheduleContent').innerHTML;
-            localStorage.setItem('hipporizz_schedule_v5', html);
-        }
-
-        // Export to Markdown
-        function exportToMD() {
-            let md = '# Hipporizz 時程表\n\n';
-
-            document.querySelectorAll('.schedule-section').forEach(section => {
-                const title = section.querySelector('.section-title');
-                if (title) md += '## ' + title.textContent.trim() + '\n\n';
-
-                section.querySelectorAll('.week-block').forEach(week => {
-                    const weekTitle = week.querySelector('.week-title');
-                    const weekDate = week.querySelector('.week-date');
-                    md += '### ' + weekTitle.textContent + ' (' + weekDate.textContent + ')\n\n';
-
-                    week.querySelectorAll('.task-item').forEach(item => {
-                        const cb = item.querySelector('.checkbox');
-                        const text = item.querySelector('.task-text');
-                        const checked = cb && cb.checked ? 'x' : ' ';
-                        if (text && text.textContent.trim()) {
-                            md += '- [' + checked + '] ' + text.textContent.trim() + '\n';
-                        }
-                    });
-                    md += '\n';
-                });
-            });
-
-            const blob = new Blob([md], { type: 'text/markdown' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'hipporizz_schedule.md';
-            a.click();
-            URL.revokeObjectURL(url);
-        }
-
-        // Clear current week
-        function clearWeek() {
-            if (!confirm('確定要清空本週任務嗎？')) return;
-            // Find W1 (current week) and clear its tasks
-            const w1 = document.querySelector('.week-block');
-            if (w1) {
-                const tasks = w1.querySelectorAll('.task-item');
-                tasks.forEach(t => t.remove());
-                saveData();
-                updateStats();
-            }
+            localStorage.setItem('hipporizz_schedule_v6', html);
         }
 
         // Utilities
@@ -881,7 +961,7 @@
         }
 
         function calculateDaysLeft() {
-            const target = new Date('2026-03-02');
+            const target = new Date('2026-03-10');
             const diff = Math.ceil((target - new Date()) / (1000 * 60 * 60 * 24));
             document.getElementById('daysLeft').textContent = diff > 0 ? diff : 0;
         }
